@@ -1,0 +1,22 @@
+name: Trollcraft
+version: 0.1
+description: Troll your players with sounds and potion effects!
+author: mathphreak
+main: com.github.mathphreak.trollcraft.Trollcraft
+commands:
+  troll:
+    description: Troll a given player.
+    usage: /troll <player> [<initial interval between sounds, in ticks>] [<use potion effects?>]
+    permission: trollcraft.troll
+permissions:
+  trollcraft.*:
+    description: Troll other players and be immune to trolling.
+    children:
+      trollcraft.troll: true
+      trollcraft.immune: true
+  trollcraft.troll:
+    description: Troll other players.
+    default: op
+  trollcraft.immune:
+    description: Become immune to trolling.
+    default: false
